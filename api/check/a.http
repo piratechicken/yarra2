@@ -17,8 +17,8 @@ POST http://localhost:7000/auth
 Content-Type: application/json
 
 {
-  "email": "patrick.smith@coderacademy.edu.au",
-  "password": "password123"
+  "email": "simon@simon.com",
+  "password": "123456"
 }
 
 ### Create product
@@ -32,8 +32,8 @@ Content-Type: application/json
 }
 
 ### Update product
-PUT http://localhost:7000/products/5a28c95edff50e5b800e28ce
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdHJpY2suc21pdGhAY29kZXJhY2FkZW15LmVkdS5hdSIsImlhdCI6MTUxMjUzNDY3MywiZXhwIjoxNTEzMTM5NDczLCJzdWIiOiI1YTI3NTA2MzJkNmEzZDc5ODIwN2VmNjMifQ.zjeQTwytluem7xsesc7JHoUjM-SipTFJHg_nGiWTln4
+PUT http://localhost:7000/products/5a2f56ac94fe18455fb741bd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbW9uQHNpbW9uLmNvbSIsImlhdCI6MTUxMzEyODY4MCwiZXhwIjoxNTEzNzMzNDgwLCJzdWIiOiI1YTI3NTBiNGUyNmM5ODFjMjUzNTAyY2EifQ.gpQvbLycRsWBoB2EBJBNkDMr3YZ9Zd2IdM9xTKdWZYU
 Content-Type: application/json
 
 {
@@ -50,5 +50,5 @@ POST http://localhost:7000/wishlist/products/5a2742308714fc738c09968b
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdHJpY2suc21pdGhAY29kZXJhY2FkZW15LmVkdS5hdSIsImlhdCI6MTUxMjY5NDQyOCwiZXhwIjoxNTEzMjk5MjI4LCJzdWIiOiI1YTI3NTA2MzJkNmEzZDc5ODIwN2VmNjMifQ.tzEjvcsj3cHCG7t6M7R-ufvmD1ddRj-J5OMapXcz5H8
 
 ### Remove from wishlist
-DELETE http://localhost:7000/wishlist/products/5a2742308714fc738c09968b
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdHJpY2suc21pdGhAY29kZXJhY2FkZW15LmVkdS5hdSIsImlhdCI6MTUxMjY5NDQyOCwiZXhwIjoxNTEzMjk5MjI4LCJzdWIiOiI1YTI3NTA2MzJkNmEzZDc5ODIwN2VmNjMifQ.tzEjvcsj3cHCG7t6M7R-ufvmD1ddRj-J5OMapXcz5H8
+DELETE http://localhost:7000/wishlist/products/5a2a3b4ade97fc02e48f1a85
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbW9uQHNpbW9uLmNvbSIsImlhdCI6MTUxMzEyODY4MCwiZXhwIjoxNTEzNzMzNDgwLCJzdWIiOiI1YTI3NTBiNGUyNmM5ODFjMjUzNTAyY2EifQ.gpQvbLycRsWBoB2EBJBNkDMr3YZ9Zd2IdM9xTKdWZYU

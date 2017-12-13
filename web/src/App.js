@@ -183,10 +183,10 @@ class App extends Component {
             
             <Route path='/products' exact render={ () => (
               <Fragment>
-                { products && wishlist &&
+                { products &&
                   <ProductList
                     products={ products }
-                    wishlist={ wishlist.products }
+                    productsInWishlist={ wishlist ? wishlist.products : null }
                     editedProductID={ editedProductID }
                     onEditProduct={ this.onBeginEditingProduct }
                     onAddProductToWishlist={ this.onAddProductToWishlist }
@@ -246,14 +246,16 @@ class App extends Component {
       this.setState({ error })
     }
 
+    listProducts()
+      .then((products) => {
+        this.setState({ products })
+      })
+      .catch(saveError)
+
     const { decodedToken } = this.state
-    if (decodedToken) {
-      listProducts()
-        .then((products) => {
-          this.setState({ products })
-        })
-        .catch(saveError)
-      
+    const signedIn = !!decodedToken
+
+    if (signedIn) {
       listWishlist()
         .then((wishlist) => {
           this.setState({ wishlist })
@@ -262,7 +264,6 @@ class App extends Component {
     }
     else {
       this.setState({
-        products: null,
         wishlist: null
       })
     }

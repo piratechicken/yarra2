@@ -3,7 +3,7 @@ import Product from './Product'
 
 function ProductList({
   products,
-  wishlist,
+  productsInWishlist,
   editedProductID,
   onEditProduct,
   onAddProductToWishlist,
@@ -15,9 +15,9 @@ function ProductList({
       <h2>Products</h2>
       {
         products.map((product) => {
-          let inWishlist = false // Work out you would determine if a product is in `productsInWishlist`
+          let inWishlist = false
           
-           if (wishlist.find(productInWishlist => productInWishlist._id === product._id)) {
+          if (!!productsInWishlist && productsInWishlist.find(productInWishlist => productInWishlist._id === product._id)) {
             inWishlist = true
           }
 
@@ -27,8 +27,8 @@ function ProductList({
           //   }
           // })
           
-          const showAddToWishlist = !inWishlist
-          const showRemoveFromWishlist = inWishlist
+          const showAddToWishlist = !!productsInWishlist && !inWishlist
+          const showRemoveFromWishlist = !!productsInWishlist && inWishlist
 
 
           return (
