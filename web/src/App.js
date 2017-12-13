@@ -185,7 +185,7 @@ class App extends Component {
               { products && wishlist &&
                 <ProductList
                   products={ products }
-                  productsInWishlist={ wishlist.products }
+                  wishlist={ wishlist.products }
                   editedProductID={ editedProductID }
                   onEditProduct={ this.onBeginEditingProduct }
                   onAddProductToWishlist={ this.onAddProductToWishlist }
