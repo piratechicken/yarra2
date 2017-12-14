@@ -10,15 +10,20 @@ function ProductList({
   onRemoveProductFromWishlist,
   renderEditForm
 }) {
+
   return (
     <div className='mb-3'>
       <h2>Products</h2>
-      {
+      { 
         products.map((product) => {
           let inWishlist = false
           
           if (!!productsInWishlist && productsInWishlist.find(productInWishlist => productInWishlist._id === product._id)) {
             inWishlist = true
+          }
+
+          for (var i = 1; i < 21; i++) {
+            console.log(`i = ${i} :`,inWishlist)
           }
 
           // wishlist.forEach((productInWishlist) => {
